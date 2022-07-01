@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
-import { ReactElement } from "react";
 import Head from "next/head";
+import { ReactElement } from "react";
 
-import { Header } from "../components";
+import { Banner, Header } from "../components";
 
 const Home: NextPage = (): ReactElement => {
   return (
@@ -14,6 +14,7 @@ const Home: NextPage = (): ReactElement => {
       </Head>
 
       <Header />
+      <Banner />
     </>
   );
 };
