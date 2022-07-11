@@ -2,8 +2,6 @@ import { Box, Flex, Icon } from "@chakra-ui/react";
 import { ChevronLeftIcon } from "@chakra-ui/icons";
 import Image from "next/image";
 
-import logoImg from "../../public/assets/logo.svg";
-
 type HeaderProps = {
   showBackButton?: boolean;
 };
@@ -23,7 +21,12 @@ export const Header = ({ showBackButton = false }: HeaderProps) => {
       )}
 
       <Box margin="auto">
-        <Image src={logoImg} alt="World Trip logo" height={40} />
+        <Image
+          src="/assets/logo.svg"
+          alt="World Trip logo"
+          width={184}
+          height={40}
+        />
       </Box>
     </Flex>
   );
