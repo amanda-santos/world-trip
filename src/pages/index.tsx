@@ -3,12 +3,9 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { Box, Divider, Text } from "@chakra-ui/react";
 
-import { Banner, Header, TravelTypes } from "../components";
-import { useMobile } from "../hooks";
+import { Banner, ContinentsSlides, Header, TravelTypes } from "../components";
 
 const Home: NextPage = (): ReactElement => {
-  const { isMobile } = useMobile();
-
   return (
     <>
       <Head>
@@ -31,18 +28,21 @@ const Home: NextPage = (): ReactElement => {
       >
         <Divider
           width={90}
-          marginY={isMobile ? 8 : 12}
+          marginY={["8", "8", "12"]}
           borderWidth={1}
           borderColor="dark.text"
         />
         <Text
           marginTop="6"
-          fontSize={isMobile ? "2xl" : "4xl"}
+          marginBottom="20"
+          fontSize={["2xl", "2xl", "4xl"]}
           fontWeight="medium"
         >
           Vamos nessa? <br /> Então escolha seu continente
         </Text>
       </Box>
+
+      <ContinentsSlides />
     </>
   );
 };
